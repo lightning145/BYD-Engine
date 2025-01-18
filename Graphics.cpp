@@ -1,5 +1,5 @@
 
-#include "OpenGL4.6/OGL.h"
+#include "OGL.h"
 
 #include <iostream>
 

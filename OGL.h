@@ -1,9 +1,9 @@
 #ifndef OPENGL_H
 #define OPENGL_H
 
-#include "../Graphics.h"
+#include "Graphics.h"
 
-#include "../Main.h"
+#include "Main.h"
 
 class OGL
 {
