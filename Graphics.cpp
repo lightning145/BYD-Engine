@@ -1,21 +1,18 @@
-#include "Direct3D9/Direct3D9.h"
+
 #include "OpenGL4.6/OGL.h"
 
-Direct3D9* d3d9;
+#include <iostream>
+
 OGL* ogl;
 
 Graphics::Graphics(Window* window,bool windowed,int Renderer)
 {
     switch (Renderer)
     {
-    case Direct3D:
-        d3d9 = new Direct3D9(window,windowed);
-        GraphicsRenderer = Direct3D;
-        break;
-    
     case OpenGL:
         ogl = new OGL(window,windowed);
         GraphicsRenderer = OpenGL; 
+        std::cout<<"Renderer: OpenGL 4.6\n";
         break;
 
     default:
@@ -26,13 +23,6 @@ Graphics::Graphics(Window* window,bool windowed,int Renderer)
 Graphics::~Graphics()
 {
     delete ogl;
-    delete d3d9;
-}
-
-void Graphics::Clear(int r,int g,int b,int a)
-{
-
-    d3d9->device->Clear(0, 0, D3DCLEAR_TARGET | D3DCLEAR_ZBUFFER, D3DCOLOR_RGBA(r,g,b,a), 1.0f, 0);
 
 }
 
@@ -46,9 +36,6 @@ void Graphics::Present(Window* window)
 {
     switch (GraphicsRenderer)
     {
-    case Direct3D:
-        d3d9->device->Present(0,0,0,0);
-        break;
 
     case OpenGL:
         glfwSwapBuffers(window->w);
@@ -57,4 +44,10 @@ void Graphics::Present(Window* window)
     default:
         break;
     }
+}
+
+
+void Graphics::DrawTriangle()
+{
+   
 }

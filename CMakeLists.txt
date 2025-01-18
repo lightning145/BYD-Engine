@@ -4,7 +4,6 @@ project(Main)
 
 add_executable(Main 
         ${CMAKE_CURRENT_SOURCE_DIR}/3rd/glad4.6/src/glad.c
-        ${CMAKE_CURRENT_SOURCE_DIR}/Direct3D9/Direct3D9.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/OpenGL4.6/OGL.cpp
         Graphics.cpp
         Window.cpp
@@ -34,9 +33,6 @@ target_link_libraries(Main
                 libwinmm.a
                 libimm32.a
                 libversion.a
-
-                libd3d9.a
-                libd3dx9.a
 
                 ${CMAKE_CURRENT_SOURCE_DIR}/3rd/glfw-3.4/lib/libglfw3.a
 

@@ -1,7 +1,6 @@
 #ifndef GRAPHICS_H
 #define GRAPHICS_H
 
-#define Direct3D 0
 #define OpenGL 1 
 
 #include "Window.h"
@@ -16,6 +15,8 @@ public:
     void Clear(float r,float g,float b,float a);
 
     void Present(Window* window);
+
+    void DrawTriangle();
 
 private:
     int GraphicsRenderer;
