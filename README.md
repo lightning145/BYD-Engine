@@ -1,0 +1,9 @@
+# Simple-Graphics
+
+Direct3D9 and OpenGL4.6
+
+# Build
+1. You Need Downlod GLFW, GLM and MinGW
+2. Open Visual Studio Code and install C/C++ Extension Pack
+3. Generated
+4. Go to build folder and found Main.exe
