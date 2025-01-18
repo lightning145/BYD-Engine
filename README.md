@@ -1,6 +1,6 @@
 # Simple-Graphics
 
-Direct3D9 and OpenGL4.6
+OpenGL4.6
 
 # Build
 1. You Need Downlod GLFW, GLM and MinGW
