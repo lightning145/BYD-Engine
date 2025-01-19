@@ -16,7 +16,10 @@ Window::Window(int width,int height,int vsync)
         printf("Failed to initialize GLFW!");
     }
 
+    glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
+
     w = glfwCreateWindow(width, height, " ", NULL, NULL);
+
     Monitor = glfwGetPrimaryMonitor();
     mode = glfwGetVideoMode(Monitor);
 
