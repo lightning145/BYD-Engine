@@ -1,16 +1,16 @@
 #include "OGL.h"
 
-OGL::OGL(Window* window,bool windowed)
+OGL::OGL(Window* window,int windowed)
 {
     gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
     
     switch (windowed)
     {
-    case true:
+    case 1:
         
         break;
 
-    case false:
+    case 0:
         glfwSetWindowMonitor(window->w,
         window->Monitor,0,0,
         window->mode->width,

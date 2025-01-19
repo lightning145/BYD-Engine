@@ -4,8 +4,11 @@ project(Main)
 
 add_executable(Main 
         ${CMAKE_CURRENT_SOURCE_DIR}/3rd/glad4.6/src/glad.c
-        ${CMAKE_CURRENT_SOURCE_DIR}/OpenGL4.6/OGL.cpp
+        Shader.cpp
+        OGL.cpp
         Graphics.cpp
+        Triangle.cpp
+        Cube.cpp
         Window.cpp
         Main.cpp)
 

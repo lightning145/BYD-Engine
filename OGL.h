@@ -8,7 +8,7 @@
 class OGL
 {
 public:
-    OGL(Window* window,bool windowed);
+    OGL(Window* window,int windowed);
     ~OGL();
 
 private:
